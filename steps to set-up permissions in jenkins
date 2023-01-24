@@ -1,0 +1,13 @@
+In the Jenkins dashboard, click on the "Manage Jenkins" button and then select "Configure Global Security".
+
+In the "Authorization" section, select the security realm you want to use, such as "Jenkins' own user database" or "LDAP".
+
+In the "Authorization" section, select the authorization strategy you want to use. The most common strategy is "Matrix-based security", which allows you to specify permissions for specific users and groups.
+
+In the "Matrix-based security" section, you can add users and groups and assign them specific permissions. For example, you can give the "admin" group permission to "Run Scripts" and "Configure Jobs".
+
+In the "Project-based Matrix Authorization" you can assign permission for a specific job or pipeline. This way you can restrict permission to a specific pipeline or job.
+
+To enable permissions for a specific plugin, go to the "Manage Jenkins" > "Manage Plugins" and find the plugin you want to enable, click on the plugin and enable the permission.
+
+Once you have set up the permissions, save the changes and test them by logging in as different users and attempting to perform actions that should be restricted.
