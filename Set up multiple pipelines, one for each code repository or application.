@@ -1,0 +1,31 @@
+Log in to the Jenkins dashboard and click on the "New Item" button.
+
+Give a name to your pipeline and select "Pipeline" as the type of project.
+
+In the "Pipeline" section, you can choose to configure your pipeline using either the "Pipeline script" option or the "Pipeline script from SCM" option.
+
+If you choose the "Pipeline script" option, you will need to provide a script that defines the build, test, and deployment steps for your pipeline. This script can be written in Jenkins' built-in Pipeline DSL or in a variety of other languages.
+
+If you choose the "Pipeline script from SCM" option, you will need to provide the repository URL and credentials for your code repository. Jenkins will automatically fetch the pipeline script from the repository.
+
+In both cases, you can use Jenkins' built-in variables and functions to dynamically configure the pipeline based on the code repository or application.
+
+Once the pipeline is created, you can trigger the pipeline via webhooks, poll SCM or by manual trigger
+
+Repeat the above steps for each code repository or application you want to set up a pipeline for.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Via CLI
+<username> <jenkins_server_ip>.
+
+Verify that the Jenkins CLI is installed by running the command jenkins-cli.
+
+Create a new pipeline by running the command jenkins-cli create-job <pipeline_name> < pipeline_config.xml. This command creates a new pipeline with the specified name and using the pipeline configuration provided in the pipeline_config.xml file.
+
+Verify the pipeline is created successfully by running the command jenkins-cli get-job <pipeline_name>.
+
+To configure the pipeline, you can run the command jenkins-cli configure-job <pipeline_name> < pipeline_config.xml and this will update the pipeline configuration.
+
+Repeat the above steps for each code repository or application you want to set up a pipeline for.
+
