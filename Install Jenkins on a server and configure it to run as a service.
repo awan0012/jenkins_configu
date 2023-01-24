@@ -1,0 +1,13 @@
+Download the Jenkins package for your operating system from the Jenkins website (https://jenkins.io/download/).
+
+Install the package by following the instructions for your operating system. This may involve running commands such as apt-get install jenkins or yum install jenkins.
+
+Start the Jenkins service by running the command systemctl start jenkins on Linux or jenkins.exe start on Windows.
+
+Verify that Jenkins is running by visiting http://your_server_ip:8080 in a web browser. You should see the Jenkins dashboard.
+
+Configure the Jenkins service to start automatically when the server is rebooted by running the command systemctl enable jenkins on Linux or jenkins.exe install on Windows.
+
+To configure Jenkins to run on a different port, edit the file /etc/default/jenkins on Linux or C:\Program Files (x86)\Jenkins\jenkins.xml on Windows and change the value of the HTTP_PORT variable.
+
+For security reasons, it's recommended to run Jenkins behind a reverse proxy or use a Jenkins Security Plugin.
